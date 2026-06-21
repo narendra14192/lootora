@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-lootora-bg: #0A0A0A;
+  --color-lootora-card: #141414;
+  --color-lootora-purple: #8B5CF6;
+  --color-lootora-blue: #00E5FF;
+  --color-lootora-pink: #FF2E88;
+  --color-lootora-text: #FFFFFF;
+  --color-lootora-muted: #A0A0A0;
+  --color-lootora-border: #1F1F1F;
+
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --shadow-neonPurple: 0 0 15px rgba(139, 92, 246, 0.4);
+  --shadow-neonBlue: 0 0 15px rgba(0, 229, 255, 0.4);
+  --shadow-neonPink: 0 0 15px rgba(255, 46, 136, 0.4);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@layer base {
+  body {
+    @apply bg-lootora-bg text-lootora-text font-poppins antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.08) 0%, transparent 40%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-orbitron font-bold tracking-wider;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Cyber Grid Panning Animation */
+@keyframes grid-pan {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 40px;
+  }
+}
+
+.animate-grid-pan {
+  animation: grid-pan 20s linear infinite;
+}
+
+/* Pulse Glow Animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(139, 92, 246, 0.6), 0 0 12px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 25px rgba(0, 229, 255, 0.6);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 4s ease-in-out infinite;
+}
+
+/* Neon Text Helpers */
+.text-neon-purple {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+.text-neon-blue {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+.text-neon-pink {
+  text-shadow: 0 0 10px rgba(255, 46, 136, 0.8);
+}
+
+/* Glassmorphism Card Style */
+.glass-panel {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 20, 20, 0.85);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.2);
+}
+
+/* Continuous Logo Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
