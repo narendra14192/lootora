@@ -12,11 +12,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Configure CORS to allow our React app to communicate
+var allowedOriginsStr = builder.Configuration["Cors:AllowedOriginsString"];
+var allowedOrigins = !string.IsNullOrEmpty(allowedOriginsStr)
+    ? allowedOriginsStr.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    : builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() 
+      ?? new[] { "http://localhost:5173", "http://localhost:5174", "http://localhost:3000" };
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowClient", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://localhost:5174", "http://localhost:3000")
+        policy.WithOrigins(allowedOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
@@ -81,6 +87,10 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+// Configure dynamic port binding for environments like Render
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5240";
+builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 

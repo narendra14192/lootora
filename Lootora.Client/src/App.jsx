@@ -10,7 +10,7 @@ import {
   CartesianGrid, Tooltip, Legend 
 } from "recharts";
 
-const API_BASE = "http://localhost:5240/api";
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5240/api";
 
 import { supabase, isSupabaseConfigured } from "./supabase";
 
@@ -3016,7 +3016,7 @@ function Footer({ setCurrentPage, selectCategoryNode }) {
           <h4 className="font-orbitron font-extrabold tracking-widest text-white uppercase text-[10px]">TRANSMISSION NETWORK</h4>
           <ul className="space-y-2 text-[11px]">
             <li>HQ Node Bangalore, India</li>
-            <li>Terminal: <a href="mailto:support@gamevault.com" className="text-lootora-blue hover:underline">support@gamevault.com</a></li>
+            <li>Terminal: <a href="mailto:supportlootora@gmail.com" className="text-lootora-blue hover:underline">supportlootora@gmail.com</a></li>
             <li>Node Status: <span className="text-green-400 font-orbitron text-[9px] font-bold border border-green-500/20 px-1 py-0.5 rounded bg-green-500/5">SECTOR 1 ACTIVE</span></li>
           </ul>
         </div>
