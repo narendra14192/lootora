@@ -440,6 +440,156 @@ namespace Lootora.Api.Data
                         BuyUrl = "https://www.nintendo.com/",
                         IsTrending = true,
                         IsLimitedEdition = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox One S Wireless Gamepad",
+                        Slug = "evofox-one-s-wireless-gamepad",
+                        Brand = "EvoFox",
+                        Price = 1599m,
+                        Description = "3-Mode Wireless controller featuring Hall-Effect Joysticks & Triggers, zero stick drift, and dynamic vibration feedback.",
+                        ImageUrl = "https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Connectivity\":\"2.4GHz Wireless, Bluetooth, Wired\",\"Sensor\":\"Hall-Effect Magnetic\",\"Compatibility\":\"PC, Android, iOS, Switch\",\"Battery Life\":\"Up to 12 Hours\"}",
+                        Rating = 4.5,
+                        ReviewCount = 142,
+                        CategoryId = categories["controllers"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox One X Wireless Gamepad",
+                        Slug = "evofox-one-x-wireless-gamepad",
+                        Brand = "EvoFox",
+                        Price = 2999m,
+                        Description = "Premium Tri-Mode Wireless controller with Hall-Effect precision, custom RGB LED lighting, and 1000Hz polling rate in wired mode.",
+                        ImageUrl = "https://images.unsplash.com/photo-1600086882484-013a8c69201e?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Connectivity\":\"Tri-Mode (2.4GHz, BT 5.0, USB-C)\",\"Polling Rate\":\"1000Hz (Wired)\",\"Features\":\"Hall-Effect Sensors, RGB, Macros\",\"Compatibility\":\"PC, Switch, Mobile\"}",
+                        Rating = 4.7,
+                        ReviewCount = 98,
+                        CategoryId = categories["controllers"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Elite X Wired Gamepad",
+                        Slug = "evofox-elite-x-wired-gamepad",
+                        Brand = "EvoFox",
+                        Price = 1399m,
+                        Description = "Ergonomic wired gaming controller for PC with RGB lighting accents, dual rumble motors, and plug-and-play setup.",
+                        ImageUrl = "https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Connection\":\"Wired (1.8m Braided Cable)\",\"Vibration\":\"Dual Rumble Motors\",\"Lighting\":\"RGB Accent\",\"Compatibility\":\"PC (X-Input/D-Input)\"}",
+                        Rating = 4.3,
+                        ReviewCount = 210,
+                        CategoryId = categories["controllers"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = false
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Ronin X75 Wireless Mechanical Keyboard",
+                        Slug = "evofox-ronin-x75-wireless",
+                        Brand = "EvoFox",
+                        Price = 4999m,
+                        Description = "75% layout premium gasket-mounted wireless mechanical keyboard with hot-swappable linear switches and multi-layer sound dampening.",
+                        ImageUrl = "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Form Factor\":\"75% Layout (82 Keys)\",\"Mounting\":\"Gasket Mount\",\"Connection\":\"Tri-Mode (2.4GHz, BT, USB-C)\",\"Switches\":\"Hot-Swappable Linear\"}",
+                        Rating = 4.8,
+                        ReviewCount = 57,
+                        CategoryId = categories["keyboards"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Katana X2 TKL Mechanical Keyboard",
+                        Slug = "evofox-katana-x2-tkl",
+                        Brand = "EvoFox",
+                        Price = 1899m,
+                        Description = "Compact tenkeyless mechanical gaming keyboard with clicky blue switches, rainbow LED backlighting, and a durable steel top plate.",
+                        ImageUrl = "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Form Factor\":\"TKL (87 Keys)\",\"Switches\":\"Outemu Blue Clicky\",\"Lighting\":\"Rainbow LED\",\"Keycaps\":\"Double-Shot Injection\"}",
+                        Rating = 4.4,
+                        ReviewCount = 340,
+                        CategoryId = categories["keyboards"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = false
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Fireblade TKL Gaming Keyboard",
+                        Slug = "evofox-fireblade-tkl",
+                        Brand = "EvoFox",
+                        Price = 949m,
+                        Description = "The legendary compact membrane gaming keyboard with breathing RGB effects, 19-key anti-ghosting, and durable spill-resistant keys.",
+                        ImageUrl = "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Form Factor\":\"Compact TKL\",\"Keys Type\":\"Tactile Membrane\",\"Anti-Ghosting\":\"19-Key\",\"Cable\":\"1.5m Braided USB\"}",
+                        Rating = 4.2,
+                        ReviewCount = 1850,
+                        CategoryId = categories["keyboards"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Phantom Gaming Mouse",
+                        Slug = "evofox-phantom-mouse",
+                        Brand = "EvoFox",
+                        Price = 999m,
+                        Description = "Ergonomic wired gaming mouse with 4-stage adjustable DPI up to 3200, breathing RGB LED, and 6 programmable buttons.",
+                        ImageUrl = "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Sensor\":\"High Precision Optical\",\"DPI\":\"Adjustable 1200-1600-2400-3200\",\"Buttons\":\"6 Programmable\",\"Lighting\":\"RGB Breathing\"}",
+                        Rating = 4.3,
+                        ReviewCount = 1240,
+                        CategoryId = categories["mice"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = false
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Blaze Wireless Gaming Mouse",
+                        Slug = "evofox-blaze-wireless-mouse",
+                        Brand = "EvoFox",
+                        Price = 1299m,
+                        Description = "Rechargeable wireless gaming mouse with ergonomic thumb rest, customizable RGB lighting, and adjustable DPI up to 4800.",
+                        ImageUrl = "https://images.unsplash.com/photo-1629429408209-1f912961dbd8?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Connection\":\"2.4GHz Wireless\",\"Battery\":\"Rechargeable (USB-C)\",\"DPI\":\"Up to 4800 DPI\",\"Lighting\":\"RGB Cycle\"}",
+                        Rating = 4.5,
+                        ReviewCount = 280,
+                        CategoryId = categories["mice"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox G-Blade Gaming Headset",
+                        Slug = "evofox-g-blade-headset",
+                        Brand = "EvoFox",
+                        Price = 1199m,
+                        Description = "Over-ear wired gaming headset with soft memory foam ear cushions, flexible omnidirectional microphone, and RGB LED light ring.",
+                        ImageUrl = "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Driver Size\":\"40mm Neodymium\",\"Microphone\":\"Flexible Omnidirectional\",\"Cable\":\"2.1m Durable Braided\",\"Interface\":\"3.5mm Jack + USB (for LED)\"}",
+                        Rating = 4.3,
+                        ReviewCount = 490,
+                        CategoryId = categories["headsets"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = false
+                    },
+                    new Product
+                    {
+                        Name = "EvoFox Shadow Gaming Headset",
+                        Slug = "evofox-shadow-headset",
+                        Brand = "EvoFox",
+                        Price = 1499m,
+                        Description = "Immersive gaming headset featuring powerful 50mm drivers, noise-reducing microphone, and comfortable self-adjusting headband.",
+                        ImageUrl = "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80",
+                        Specifications = "{\"Driver Size\":\"50mm Dual Drivers\",\"Microphone\":\"Noise-Reducing Retractable\",\"Sound\":\"Virtual 7.1 Surround (via USB)\",\"Lighting\":\"Breathing RGB\"}",
+                        Rating = 4.5,
+                        ReviewCount = 185,
+                        CategoryId = categories["headsets"],
+                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        IsTrending = true
                     }
                 };
 
