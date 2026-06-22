@@ -115,7 +115,7 @@ namespace Lootora.Api.Data
                         Rating = 4.6,
                         ReviewCount = 142,
                         CategoryId = categories["mice"],
-                        BuyUrl = "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+                        BuyUrl = "https://www.amazon.in/s?k=Razer%20DeathAdder%20V3&tag=lootora21-21",
                         IsTrending = false
                     },
                     new Product
@@ -130,7 +130,7 @@ namespace Lootora.Api.Data
                         Rating = 4.9,
                         ReviewCount = 285,
                         CategoryId = categories["mice"],
-                        BuyUrl = "https://www.logitechg.com/en-in/products/gaming-mice/pro-x-superlight-2.910-006632.html",
+                        BuyUrl = "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Superlight%202&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -145,7 +145,7 @@ namespace Lootora.Api.Data
                         Rating = 4.4,
                         ReviewCount = 95,
                         CategoryId = categories["mice"],
-                        BuyUrl = "https://steelseries.com/gaming-mice/rival-5",
+                        BuyUrl = "https://www.amazon.in/s?k=SteelSeries%20Rival%205&tag=lootora21-21",
                         IsTrending = false
                     },
 
@@ -162,7 +162,7 @@ namespace Lootora.Api.Data
                         Rating = 4.7,
                         ReviewCount = 110,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4",
+                        BuyUrl = "https://www.amazon.in/s?k=Razer%20BlackWidow%20V4&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -177,7 +177,7 @@ namespace Lootora.Api.Data
                         Rating = 4.6,
                         ReviewCount = 145,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.logitechg.com/en-in/products/gaming-keyboards/g915-low-profile-wireless-mechanical-gaming-keyboard.html"
+                        BuyUrl = "https://www.amazon.in/s?k=Logitech%20G915&tag=lootora21-21",
                     },
                     new Product
                     {
@@ -191,7 +191,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 135,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.corsair.com/us/en/p/keyboards/ch-9109410-na/k70-rgb-pro-mechanical-gaming-keyboard-with-pbt-double-shot-pro-keycaps-cherry-mx-red-ch-9109410-na"
+                        BuyUrl = "https://www.amazon.in/s?k=Corsair%20K70%20RGB%20Pro&tag=lootora21-21",
                     },
 
                     // Gaming Headset
@@ -207,7 +207,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 290,
                         CategoryId = categories["headsets"],
-                        BuyUrl = "https://row.hyperx.com/products/hyperx-cloud-iii-gaming-headset",
+                        BuyUrl = "https://www.amazon.in/s?k=HyperX%20Cloud%20III&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -222,7 +222,7 @@ namespace Lootora.Api.Data
                         Rating = 4.6,
                         ReviewCount = 180,
                         CategoryId = categories["headsets"],
-                        BuyUrl = "https://www.logitechg.com/en-in/products/gaming-audio/pro-x-gaming-headset-blue-voice-mic.html"
+                        BuyUrl = "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Headset&tag=lootora21-21",
                     },
                     new Product
                     {
@@ -236,7 +236,7 @@ namespace Lootora.Api.Data
                         Rating = 4.7,
                         ReviewCount = 160,
                         CategoryId = categories["headsets"],
-                        BuyUrl = "https://steelseries.com/gaming-headsets/arctis-nova-7"
+                        BuyUrl = "https://www.amazon.in/s?k=SteelSeries%20Arctis%20Nova%207&tag=lootora21-21",
                     },
 
                     // Gaming Monitor
@@ -252,7 +252,7 @@ namespace Lootora.Api.Data
                         Rating = 4.6,
                         ReviewCount = 94,
                         CategoryId = categories["monitors"],
-                        BuyUrl = "https://www.samsung.com/in/monitors/gaming/odyssey-g7-27-inch-lc27g75tqswxxl/",
+                        BuyUrl = "https://www.amazon.in/s?k=Samsung%20Odyssey%20G7&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -267,7 +267,7 @@ namespace Lootora.Api.Data
                         Rating = 4.8,
                         ReviewCount = 76,
                         CategoryId = categories["monitors"],
-                        BuyUrl = "https://www.lg.com/in/monitors/gaming-monitors/27gr95qe-b/"
+                        BuyUrl = "https://www.amazon.in/s?k=LG%20UltraGear%2027GR95QE&tag=lootora21-21",
                     },
                     new Product
                     {
@@ -281,7 +281,7 @@ namespace Lootora.Api.Data
                         Rating = 4.9,
                         ReviewCount = 55,
                         CategoryId = categories["monitors"],
-                        BuyUrl = "https://rog.asus.com/monitors/27-to-31-5-inches/rog-swift-oled-pg27aqdm/",
+                        BuyUrl = "https://www.amazon.in/s?k=ASUS%20ROG%20Swift%20OLED&tag=lootora21-21",
                         IsLimitedEdition = true
                     },
 
@@ -298,7 +298,7 @@ namespace Lootora.Api.Data
                         Rating = 4.8,
                         ReviewCount = 210,
                         CategoryId = categories["chairs"],
-                        BuyUrl = "https://secretlab.co/products/titan-evo-2022-series",
+                        BuyUrl = "https://www.amazon.in/s?k=Secretlab%20Titan%20Evo&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -313,7 +313,7 @@ namespace Lootora.Api.Data
                         Rating = 4.3,
                         ReviewCount = 89,
                         CategoryId = categories["chairs"],
-                        BuyUrl = "https://www.dxracer.com/pages/air-series"
+                        BuyUrl = "https://www.amazon.in/s?k=DXRacer%20Air&tag=lootora21-21",
                     },
                     new Product
                     {
@@ -327,7 +327,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 112,
                         CategoryId = categories["chairs"],
-                        BuyUrl = "https://www.andaseat.com/products/andaseat-kaiser-3-series-premium-gaming-chair"
+                        BuyUrl = "https://www.amazon.in/s?k=AndaSeat%20Kaiser%203&tag=lootora21-21",
                     },
 
                     // Graphics Cards
@@ -343,7 +343,7 @@ namespace Lootora.Api.Data
                         Rating = 4.9,
                         ReviewCount = 64,
                         CategoryId = categories["gpus"],
-                        BuyUrl = "https://www.nvidia.com/en-in/geforce/graphics-cards/50-series/",
+                        BuyUrl = "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205090&tag=lootora21-21",
                         IsTrending = true,
                         IsLimitedEdition = true
                     },
@@ -359,7 +359,7 @@ namespace Lootora.Api.Data
                         Rating = 4.7,
                         ReviewCount = 82,
                         CategoryId = categories["gpus"],
-                        BuyUrl = "https://www.nvidia.com/en-in/geforce/graphics-cards/50-series/",
+                        BuyUrl = "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205080&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -374,7 +374,7 @@ namespace Lootora.Api.Data
                         Rating = 4.6,
                         ReviewCount = 54,
                         CategoryId = categories["gpus"],
-                        BuyUrl = "https://www.amd.com/en/graphics/radeon-rx-series",
+                        BuyUrl = "https://www.amazon.in/s?k=AMD%20Radeon%20RX%209900%20XT&tag=lootora21-21",
                         IsTrending = false
                     },
 
@@ -391,7 +391,7 @@ namespace Lootora.Api.Data
                         Rating = 4.8,
                         ReviewCount = 74,
                         CategoryId = categories["cpus"],
-                        BuyUrl = "https://www.amd.com/en/processors/ryzen",
+                        BuyUrl = "https://www.amazon.in/s?k=AMD%20Ryzen%209%209950X&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -406,7 +406,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 52,
                         CategoryId = categories["cpus"],
-                        BuyUrl = "https://www.intel.in/content/www/in/en/products/details/processors/core-ultra.html"
+                        BuyUrl = "https://www.amazon.in/s?k=Intel%20Core%20Ultra%209&tag=lootora21-21",
                     },
 
                     // Consoles
@@ -422,7 +422,7 @@ namespace Lootora.Api.Data
                         Rating = 4.8,
                         ReviewCount = 189,
                         CategoryId = categories["consoles"],
-                        BuyUrl = "https://www.playstation.com/en-in/ps5/",
+                        BuyUrl = "https://www.amazon.in/s?k=PlayStation%205%20Pro&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -437,7 +437,7 @@ namespace Lootora.Api.Data
                         Rating = 4.7,
                         ReviewCount = 310,
                         CategoryId = categories["consoles"],
-                        BuyUrl = "https://www.nintendo.com/",
+                        BuyUrl = "https://www.amazon.in/s?k=Nintendo%20Switch%202&tag=lootora21-21",
                         IsTrending = true,
                         IsLimitedEdition = true
                     },
@@ -453,7 +453,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 142,
                         CategoryId = categories["controllers"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20One%20S%20Wireless%20Gamepad&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -468,7 +468,7 @@ namespace Lootora.Api.Data
                         Rating = 4.7,
                         ReviewCount = 98,
                         CategoryId = categories["controllers"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20One%20X%20Wireless%20Gamepad&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -483,7 +483,7 @@ namespace Lootora.Api.Data
                         Rating = 4.3,
                         ReviewCount = 210,
                         CategoryId = categories["controllers"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Elite%20X%20Wired%20Gamepad&tag=lootora21-21",
                         IsTrending = false
                     },
                     new Product
@@ -498,7 +498,7 @@ namespace Lootora.Api.Data
                         Rating = 4.8,
                         ReviewCount = 57,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Ronin%20X75%20Wireless%20Mechanical%20Keyboard&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -513,7 +513,7 @@ namespace Lootora.Api.Data
                         Rating = 4.4,
                         ReviewCount = 340,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Katana%20X2%20TKL%20Mechanical%20Keyboard&tag=lootora21-21",
                         IsTrending = false
                     },
                     new Product
@@ -528,7 +528,7 @@ namespace Lootora.Api.Data
                         Rating = 4.2,
                         ReviewCount = 1850,
                         CategoryId = categories["keyboards"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Fireblade%20TKL%20Gaming%20Keyboard&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -543,7 +543,7 @@ namespace Lootora.Api.Data
                         Rating = 4.3,
                         ReviewCount = 1240,
                         CategoryId = categories["mice"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Phantom%20Gaming%20Mouse&tag=lootora21-21",
                         IsTrending = false
                     },
                     new Product
@@ -558,7 +558,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 280,
                         CategoryId = categories["mice"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Blaze%20Wireless%20Gaming%20Mouse&tag=lootora21-21",
                         IsTrending = true
                     },
                     new Product
@@ -573,7 +573,7 @@ namespace Lootora.Api.Data
                         Rating = 4.3,
                         ReviewCount = 490,
                         CategoryId = categories["headsets"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20G-Blade%20Gaming%20Headset&tag=lootora21-21",
                         IsTrending = false
                     },
                     new Product
@@ -588,7 +588,7 @@ namespace Lootora.Api.Data
                         Rating = 4.5,
                         ReviewCount = 185,
                         CategoryId = categories["headsets"],
-                        BuyUrl = "https://www.amkette.com/pages/evofox",
+                        BuyUrl = "https://www.amazon.in/s?k=EvoFox%20Shadow%20Gaming%20Headset&tag=lootora21-21",
                         IsTrending = true
                     }
                 };

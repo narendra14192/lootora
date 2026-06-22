@@ -106,7 +106,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 142,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.razer.com/gaming-mice/razer-deathadder-v3",
+    buyUrl: "https://www.amazon.in/s?k=Razer%20DeathAdder%20V3&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -123,7 +123,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 285,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.logitechg.com/en-in/products/gaming-mice/pro-x-superlight-2.910-006632.html",
+    buyUrl: "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Superlight%202&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -140,7 +140,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 95,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://steelseries.com/gaming-mice/rival-5",
+    buyUrl: "https://www.amazon.in/s?k=SteelSeries%20Rival%205&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -159,7 +159,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 110,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4",
+    buyUrl: "https://www.amazon.in/s?k=Razer%20BlackWidow%20V4&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -176,7 +176,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 145,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.logitechg.com/en-in/products/gaming-keyboards/g915-low-profile-wireless-mechanical-gaming-keyboard.html"
+    buyUrl: "https://www.amazon.in/s?k=Logitech%20G915&tag=lootora21-21",
   },
   {
     id: 6,
@@ -191,7 +191,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 135,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.corsair.com/us/en/p/keyboards/ch-9109410-na/k70-rgb-pro-mechanical-gaming-keyboard-with-pbt-double-shot-pro-keycaps-cherry-mx-red-ch-9109410-na"
+    buyUrl: "https://www.amazon.in/s?k=Corsair%20K70%20RGB%20Pro&tag=lootora21-21",
   },
 
   // Audio Headsets
@@ -208,7 +208,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 290,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://row.hyperx.com/products/hyperx-cloud-iii-gaming-headset",
+    buyUrl: "https://www.amazon.in/s?k=HyperX%20Cloud%20III&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -224,7 +224,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 180,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://www.logitechg.com/en-in/products/gaming-audio/pro-x-gaming-headset-blue-voice-mic.html"
+    buyUrl: "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Headset&tag=lootora21-21",
   },
   {
     id: 9,
@@ -239,7 +239,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 160,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://steelseries.com/gaming-headsets/arctis-nova-7"
+    buyUrl: "https://www.amazon.in/s?k=SteelSeries%20Arctis%20Nova%207&tag=lootora21-21",
   },
 
   // Monitors
@@ -256,7 +256,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 94,
     categoryName: "Gaming Monitor",
     categorySlug: "monitors",
-    buyUrl: "https://www.samsung.com/in/monitors/gaming/odyssey-g7-27-inch-lc27g75tqswxxl/",
+    buyUrl: "https://www.amazon.in/s?k=Samsung%20Odyssey%20G7&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -272,7 +272,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 76,
     categoryName: "Gaming Monitor",
     categorySlug: "monitors",
-    buyUrl: "https://www.lg.com/in/monitors/gaming-monitors/27gr95qe-b/"
+    buyUrl: "https://www.amazon.in/s?k=LG%20UltraGear%2027GR95QE&tag=lootora21-21",
   },
   {
     id: 12,
@@ -287,7 +287,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 55,
     categoryName: "Gaming Monitor",
     categorySlug: "monitors",
-    buyUrl: "https://rog.asus.com/monitors/27-to-31-5-inches/rog-swift-oled-pg27aqdm/",
+    buyUrl: "https://www.amazon.in/s?k=ASUS%20ROG%20Swift%20OLED&tag=lootora21-21",
     isLimitedEdition: true
   },
 
@@ -305,7 +305,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 210,
     categoryName: "Gaming Chair",
     categorySlug: "chairs",
-    buyUrl: "https://secretlab.co/products/titan-evo-2022-series",
+    buyUrl: "https://www.amazon.in/s?k=Secretlab%20Titan%20Evo&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -321,7 +321,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 89,
     categoryName: "Gaming Chair",
     categorySlug: "chairs",
-    buyUrl: "https://www.dxracer.com/pages/air-series"
+    buyUrl: "https://www.amazon.in/s?k=DXRacer%20Air&tag=lootora21-21",
   },
   {
     id: 15,
@@ -336,7 +336,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 112,
     categoryName: "Gaming Chair",
     categorySlug: "chairs",
-    buyUrl: "https://www.andaseat.com/products/andaseat-kaiser-3-series-premium-gaming-chair"
+    buyUrl: "https://www.amazon.in/s?k=AndaSeat%20Kaiser%203&tag=lootora21-21",
   },
 
   // GPUs
@@ -353,7 +353,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 64,
     categoryName: "Graphics Cards",
     categorySlug: "gpus",
-    buyUrl: "https://www.nvidia.com/en-in/geforce/graphics-cards/50-series/",
+    buyUrl: "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205090&tag=lootora21-21",
     isTrending: true,
     isLimitedEdition: true
   },
@@ -370,7 +370,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 82,
     categoryName: "Graphics Cards",
     categorySlug: "gpus",
-    buyUrl: "https://www.nvidia.com/en-in/geforce/graphics-cards/50-series/",
+    buyUrl: "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205080&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -386,7 +386,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 54,
     categoryName: "Graphics Cards",
     categorySlug: "gpus",
-    buyUrl: "https://www.amd.com/en/graphics/radeon-rx-series"
+    buyUrl: "https://www.amazon.in/s?k=AMD%20Radeon%20RX%209900%20XT&tag=lootora21-21",
   },
 
   // CPUs
@@ -403,7 +403,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 74,
     categoryName: "Processors",
     categorySlug: "cpus",
-    buyUrl: "https://www.amd.com/en/processors/ryzen",
+    buyUrl: "https://www.amazon.in/s?k=AMD%20Ryzen%209%209950X&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -419,7 +419,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 52,
     categoryName: "Processors",
     categorySlug: "cpus",
-    buyUrl: "https://www.intel.in/content/www/in/en/products/details/processors/core-ultra.html"
+    buyUrl: "https://www.amazon.in/s?k=Intel%20Core%20Ultra%209&tag=lootora21-21",
   },
 
   // Consoles
@@ -436,7 +436,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 189,
     categoryName: "Gaming Console",
     categorySlug: "consoles",
-    buyUrl: "https://www.playstation.com/en-in/ps5/",
+    buyUrl: "https://www.amazon.in/s?k=PlayStation%205%20Pro&tag=lootora21-21",
     isTrending: true
   },
   {
@@ -452,7 +452,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 310,
     categoryName: "Gaming Console",
     categorySlug: "consoles",
-    buyUrl: "https://www.nintendo.com/",
+    buyUrl: "https://www.amazon.in/s?k=Nintendo%20Switch%202&tag=lootora21-21",
     isTrending: true,
     isLimitedEdition: true
   },
@@ -469,7 +469,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 142,
     categoryName: "Controllers & Gamepads",
     categorySlug: "controllers",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20One%20S%20Wireless%20Gamepad&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -486,7 +486,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 98,
     categoryName: "Controllers & Gamepads",
     categorySlug: "controllers",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20One%20X%20Wireless%20Gamepad&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -503,7 +503,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 210,
     categoryName: "Controllers & Gamepads",
     categorySlug: "controllers",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Elite%20X%20Wired%20Gamepad&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -520,7 +520,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 57,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Ronin%20X75%20Wireless%20Mechanical%20Keyboard&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -537,7 +537,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 340,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Katana%20X2%20TKL%20Mechanical%20Keyboard&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -554,7 +554,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 1850,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Fireblade%20TKL%20Gaming%20Keyboard&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -571,7 +571,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 1240,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Phantom%20Gaming%20Mouse&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -588,7 +588,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 280,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Blaze%20Wireless%20Gaming%20Mouse&tag=lootora21-21",
     isTrending: true,
     reviews: []
   },
@@ -605,7 +605,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 490,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20G-Blade%20Gaming%20Headset&tag=lootora21-21",
     isTrending: false,
     reviews: []
   },
@@ -622,7 +622,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 185,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://www.amkette.com/pages/evofox",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20Shadow%20Gaming%20Headset&tag=lootora21-21",
     isTrending: true,
     reviews: []
   }
