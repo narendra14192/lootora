@@ -31,6 +31,8 @@ namespace Lootora.Api.Data
                     context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Reviews\" CASCADE;");
                     context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"RedirectionLogs\" CASCADE;");
                     context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Products\" CASCADE;");
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Categories\" CASCADE;");
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Users\" CASCADE;");
                     Console.WriteLine("Dropped old tables to update product schema.");
                 }
             }
