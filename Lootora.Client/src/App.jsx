@@ -3015,7 +3015,7 @@ function Footer({ setCurrentPage, selectCategoryNode }) {
         <div className="space-y-3">
           <h4 className="font-orbitron font-extrabold tracking-widest text-white uppercase text-[10px]">TRANSMISSION NETWORK</h4>
           <ul className="space-y-2 text-[11px]">
-            <li>HQ Node Bangalore, India</li>
+            <li>HQ Node Kakinada, India</li>
             <li>Terminal: <a href="mailto:supportlootora@gmail.com" className="text-lootora-blue hover:underline">supportlootora@gmail.com</a></li>
             <li>Node Status: <span className="text-green-400 font-orbitron text-[9px] font-bold border border-green-500/20 px-1 py-0.5 rounded bg-green-500/5">SECTOR 1 ACTIVE</span></li>
           </ul>
