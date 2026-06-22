@@ -8,12 +8,13 @@ ENV ASPNETCORE_URLS=http://+:8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy csproj and restore dependencies
-COPY ["Lootora.Api.csproj", "./"]
-RUN dotnet restore "./Lootora.Api.csproj"
+# Copy csproj and restore dependencies (paths are relative to repo root)
+COPY ["Lootora.Api/Lootora.Api.csproj", "Lootora.Api/"]
+RUN dotnet restore "Lootora.Api/Lootora.Api.csproj"
 
 # Copy all remaining source files and build
-COPY . .
+COPY Lootora.Api/ Lootora.Api/
+WORKDIR "/src/Lootora.Api"
 RUN dotnet build "Lootora.Api.csproj" -c Release -o /app/build
 
 # Publish the build artifacts
