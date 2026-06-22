@@ -104,7 +104,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 142,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.amazon.in/s?k=Razer%20DeathAdder%20V3&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=Razer%20DeathAdder%20V3&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: false,
     reviews: []
   },
@@ -121,7 +121,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 285,
     categoryName: "Gaming Mouse",
     categorySlug: "mice",
-    buyUrl: "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Superlight%202&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=Logitech%20G%20Pro%20X%20Superlight%202&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true,
     reviews: []
   },
@@ -138,7 +138,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 110,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.amazon.in/s?k=Razer%20BlackWidow%20V4&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=Razer%20BlackWidow%20V4&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true,
     reviews: []
   },
@@ -155,7 +155,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 145,
     categoryName: "Gaming Keyboard",
     categorySlug: "keyboards",
-    buyUrl: "https://www.amazon.in/s?k=Logitech%20G915&tag=lootora21-21"
+    buyUrl: "https://www.amazon.in/s?k=Logitech%20G915&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl"
   },
   {
     id: 7,
@@ -170,7 +170,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 290,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://www.amazon.in/s?k=HyperX%20Cloud%20III&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=HyperX%20Cloud%20III&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true
   },
   {
@@ -186,7 +186,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 160,
     categoryName: "Gaming Headset",
     categorySlug: "headsets",
-    buyUrl: "https://www.amazon.in/s?k=SteelSeries%20Arctis%20Nova%207&tag=lootora21-21"
+    buyUrl: "https://www.amazon.in/s?k=SteelSeries%20Arctis%20Nova%207&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl"
   },
   {
     id: 10,
@@ -201,7 +201,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 94,
     categoryName: "Gaming Monitor",
     categorySlug: "monitors",
-    buyUrl: "https://www.amazon.in/s?k=Samsung%20Odyssey%20G7&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=Samsung%20Odyssey%20G7&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true
   },
   {
@@ -217,7 +217,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 76,
     categoryName: "Gaming Monitor",
     categorySlug: "monitors",
-    buyUrl: "https://www.amazon.in/s?k=LG%20UltraGear%2027GR95QE&tag=lootora21-21"
+    buyUrl: "https://www.amazon.in/s?k=LG%20UltraGear%2027GR95QE&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl"
   },
   {
     id: 13,
@@ -232,7 +232,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 210,
     categoryName: "Gaming Chair",
     categorySlug: "chairs",
-    buyUrl: "https://www.amazon.in/s?k=Secretlab%20Titan%20Evo&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=Secretlab%20Titan%20Evo&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true
   },
   {
@@ -248,7 +248,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 64,
     categoryName: "Graphics Cards",
     categorySlug: "gpus",
-    buyUrl: "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205090&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=NVIDIA%20GeForce%20RTX%205090&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true,
     isLimitedEdition: true
   },
@@ -265,7 +265,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 189,
     categoryName: "Gaming Console",
     categorySlug: "consoles",
-    buyUrl: "https://www.amazon.in/s?k=PlayStation%205%20Pro&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=PlayStation%205%20Pro&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true
   },
   {
@@ -281,7 +281,7 @@ const MOCK_PRODUCTS = [
     reviewCount: 142,
     categoryName: "Controllers & Gamepads",
     categorySlug: "controllers",
-    buyUrl: "https://www.amazon.in/s?k=EvoFox%20One%20S%20Wireless%20Gamepad&tag=lootora21-21",
+    buyUrl: "https://www.amazon.in/s?k=EvoFox%20One%20S%20Wireless%20Gamepad&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl",
     isTrending: true,
     reviews: []
   }

@@ -104,7 +104,7 @@ function generateProducts() {
       const reviewCount = 50 + (i * 45) + (id % 13);
       
       const encodedName = encodeURIComponent(name);
-      const buyUrl = `https://www.amazon.in/s?k=${encodedName}&tag=lootora21-21`;
+      const buyUrl = `https://www.amazon.in/s?k=${encodedName}&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl`;
 
       products.push({
         Name: name,

@@ -97,7 +97,9 @@ namespace Lootora.Api.Data
             }
 
             // 3. Seed GameVault Products from JSON
-            if (context.Products.Count() < 100)
+            var firstProduct = context.Products.FirstOrDefault();
+            bool needsSeedUpdate = firstProduct == null || !firstProduct.BuyUrl.Contains("linkId=adb686c2312ad063f605e51bfbbe995f");
+            if (context.Products.Count() < 100 || needsSeedUpdate)
             {
                 var categories = context.Categories.ToDictionary(c => c.Slug, c => c.Id);
                 try
