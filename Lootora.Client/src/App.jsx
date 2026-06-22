@@ -2322,14 +2322,8 @@ function AuthPage({ setUser, showNotification, setCurrentPage }) {
 
     setAuthLoading(true);
     try {
-      if (isSupabaseConfigured) {
+      if (isSupabaseConfigured && (username.includes("@") || !isLogin)) {
         if (isLogin) {
-          // Supabase login expects an email address
-          if (!username.includes("@")) {
-            showNotification("Supabase requires an email address to log in", "warning");
-            setAuthLoading(false);
-            return;
-          }
           const { data, error } = await supabase.auth.signInWithPassword({
             email: username,
             password
