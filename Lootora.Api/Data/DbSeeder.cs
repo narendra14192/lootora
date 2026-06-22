@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Lootora.Api.Models;
@@ -13,6 +14,31 @@ namespace Lootora.Api.Data
     {
         public static void Seed(LootoraDbContext context)
         {
+            // Drop tables if the old schema is present to allow RelationalDatabaseCreator to recreate them with new columns
+            try
+            {
+                bool columnExists = false;
+                using (var command = context.Database.GetDbConnection().CreateCommand())
+                {
+                    command.CommandText = "SELECT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='gamevault' AND table_name='Products' AND column_name='DiscountPrice');";
+                    context.Database.OpenConnection();
+                    columnExists = (bool)(command.ExecuteScalar() ?? false);
+                }
+
+                if (!columnExists)
+                {
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"WishlistItems\" CASCADE;");
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Reviews\" CASCADE;");
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"RedirectionLogs\" CASCADE;");
+                    context.Database.ExecuteSqlRaw("DROP TABLE IF EXISTS gamevault.\"Products\" CASCADE;");
+                    Console.WriteLine("Dropped old tables to update product schema.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error checking/dropping old tables: {ex.Message}");
+            }
+
             // Ensure tables are created
             try
             {
@@ -99,7 +125,7 @@ namespace Lootora.Api.Data
             // 3. Seed GameVault Products from JSON
             var firstProduct = context.Products.FirstOrDefault();
             bool needsSeedUpdate = firstProduct == null || !firstProduct.BuyUrl.Contains("linkId=adb686c2312ad063f605e51bfbbe995f");
-            if (context.Products.Count() < 100 || needsSeedUpdate)
+            if (context.Products.Count() < 500 || needsSeedUpdate)
             {
                 var categories = context.Categories.ToDictionary(c => c.Slug, c => c.Id);
                 try
@@ -124,6 +150,10 @@ namespace Lootora.Api.Data
                                 Slug = p.Slug,
                                 Brand = p.Brand,
                                 Price = p.Price,
+                                DiscountPrice = p.DiscountPrice,
+                                Stock = p.Stock,
+                                Tags = p.Tags,
+                                Featured = p.Featured,
                                 Description = p.Description,
                                 ImageUrl = p.ImageUrl,
                                 Specifications = p.Specifications,
@@ -165,6 +195,10 @@ namespace Lootora.Api.Data
         public string Slug { get; set; }
         public string Brand { get; set; }
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
+        public int Stock { get; set; }
+        public string Tags { get; set; }
+        public bool Featured { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public string Specifications { get; set; }

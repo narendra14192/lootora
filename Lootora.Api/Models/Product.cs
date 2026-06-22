@@ -37,6 +37,15 @@ namespace Lootora.Api.Models
 
         public int ReviewCount { get; set; } = 0;
 
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal DiscountPrice { get; set; }
+
+        public int Stock { get; set; } = 0;
+
+        public string Tags { get; set; } = string.Empty;
+
+        public bool Featured { get; set; } = false;
+
         [Required]
         public int CategoryId { get; set; }
 

@@ -88,10 +88,14 @@ function generateProducts() {
       const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
       
       const price = Math.round((cat.minPrice + (i * (cat.maxPrice - cat.minPrice) / numToGen)) / 10) * 10;
+      const discountPrice = Math.round((price * 0.85) / 10) * 10;
+      const stock = 10 + (id % 141);
+      const tags = `gaming;${cat.slug};${brand.toLowerCase().replace(/ /g, "")};premium`;
+      const featured = (i % 5 === 0);
       
       const desc = `High performance ${cat.name.toLowerCase()} manufactured by ${brand}. Features cutting edge design parameters, durability, and a dynamic gaming aesthetic tailored for enthusiasts.`;
       
-      const imgUrl = UNSPLASH_IMAGES[(i + id) % UNSPLASH_IMAGES.length];
+      const imgUrl = `https://picsum.photos/400/400?random=${id}`;
       
       const specs = {
         "Brand": brand,
@@ -111,6 +115,10 @@ function generateProducts() {
         Slug: slug,
         Brand: brand,
         Price: price,
+        DiscountPrice: discountPrice,
+        Stock: stock,
+        Tags: tags,
+        Featured: featured,
         Description: desc,
         ImageUrl: imgUrl,
         Specifications: JSON.stringify(specs),

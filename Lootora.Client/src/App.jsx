@@ -1263,9 +1263,22 @@ function ProductCard({ product, wishlist, toggleWishlist, handleBuyNow, navigate
         </div>
 
         <div className="flex items-center justify-between pt-2 border-t border-white/5">
-          <span className="font-orbitron font-black text-sm text-lootora-text">
-            ₹{(product.price || 0).toLocaleString()}
-          </span>
+          <div className="flex flex-col">
+            {product.discountPrice && product.discountPrice < product.price ? (
+              <>
+                <span className="font-orbitron font-black text-sm text-lootora-blue">
+                  ₹{(product.discountPrice).toLocaleString()}
+                </span>
+                <span className="text-[9px] text-lootora-muted line-through leading-none">
+                  ₹{(product.price).toLocaleString()}
+                </span>
+              </>
+            ) : (
+              <span className="font-orbitron font-black text-sm text-lootora-text">
+                ₹{(product.price || 0).toLocaleString()}
+              </span>
+            )}
+          </div>
           <button 
             onClick={() => handleBuyNow(product.id, product.buyUrl)}
             className="bg-white/5 border border-white/10 hover:bg-gradient-to-r hover:from-lootora-purple hover:to-lootora-pink hover:border-transparent text-white px-3.5 py-1.5 rounded text-[10px] font-orbitron font-bold tracking-widest transition-all"
@@ -1409,6 +1422,12 @@ function ShopPage({
   selectedBrand, setSelectedBrand, priceRange, setPriceRange,
   minRating, setMinRating, sortBy, setSortBy
 }) {
+  const [currentPageNum, setCurrentPageNum] = useState(1);
+
+  useEffect(() => {
+    setCurrentPageNum(1);
+  }, [search, selectedCategory, selectedBrand, priceRange, minRating, sortBy]);
+
   const brands = Array.from(new Set(products.map(p => p.brand)));
 
   const filteredProducts = products.filter(p => {
@@ -1565,18 +1584,65 @@ function ShopPage({
               <span className="text-xs text-lootora-muted font-light font-poppins block">No records match your criteria. Please calibrate your parameters.</span>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {sortedProducts.map(product => (
-                <ProductCard 
-                  key={product.id}
-                  product={product} 
-                  wishlist={wishlist}
-                  toggleWishlist={toggleWishlist}
-                  handleBuyNow={handleBuyNow}
-                  navigateToProduct={navigateToProduct}
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {sortedProducts.slice((currentPageNum - 1) * 12, currentPageNum * 12).map(product => (
+                  <ProductCard 
+                    key={product.id}
+                    product={product} 
+                    wishlist={wishlist}
+                    toggleWishlist={toggleWishlist}
+                    handleBuyNow={handleBuyNow}
+                    navigateToProduct={navigateToProduct}
+                  />
+                ))}
+              </div>
+
+              {/* Pagination Component */}
+              {Math.ceil(sortedProducts.length / 12) > 1 && (
+                <div className="flex items-center justify-center space-x-2 pt-10 border-t border-white/5">
+                  <button
+                    disabled={currentPageNum === 1}
+                    onClick={() => { setCurrentPageNum(prev => Math.max(prev - 1, 1)); window.scrollTo(0, 0); }}
+                    className="px-3.5 py-1.5 rounded border border-white/10 bg-lootora-card hover:bg-lootora-purple/20 text-xs font-orbitron font-bold tracking-widest disabled:opacity-30 disabled:pointer-events-none transition"
+                  >
+                    PREV
+                  </button>
+                  {Array.from({ length: Math.min(5, Math.ceil(sortedProducts.length / 12)) }).map((_, idx) => {
+                    const totalPages = Math.ceil(sortedProducts.length / 12);
+                    let targetPage = currentPageNum;
+                    if (currentPageNum <= 3) {
+                      targetPage = idx + 1;
+                    } else if (currentPageNum >= totalPages - 2) {
+                      targetPage = totalPages - 4 + idx;
+                    } else {
+                      targetPage = currentPageNum - 2 + idx;
+                    }
+                    if (targetPage < 1 || targetPage > totalPages) return null;
+                    return (
+                      <button
+                        key={targetPage}
+                        onClick={() => { setCurrentPageNum(targetPage); window.scrollTo(0, 0); }}
+                        className={`px-3 py-1.5 rounded border text-xs font-orbitron font-bold transition ${
+                          currentPageNum === targetPage
+                            ? "border-lootora-purple bg-lootora-purple/30 text-white shadow-neonPurple"
+                            : "border-white/5 bg-lootora-bg text-lootora-muted hover:border-white/20"
+                        }`}
+                      >
+                        {targetPage}
+                      </button>
+                    );
+                  })}
+                  <button
+                    disabled={currentPageNum === Math.ceil(sortedProducts.length / 12)}
+                    onClick={() => { setCurrentPageNum(prev => Math.min(prev + 1, Math.ceil(sortedProducts.length / 12))); window.scrollTo(0, 0); }}
+                    className="px-3.5 py-1.5 rounded border border-white/10 bg-lootora-card hover:bg-lootora-purple/20 text-xs font-orbitron font-bold tracking-widest disabled:opacity-30 disabled:pointer-events-none transition"
+                  >
+                    NEXT
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

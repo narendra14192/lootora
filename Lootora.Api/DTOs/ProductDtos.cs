@@ -10,6 +10,10 @@ namespace Lootora.Api.DTOs
         public string Slug { get; set; } = string.Empty;
         public string Brand { get; set; } = string.Empty;
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
+        public int Stock { get; set; }
+        public string Tags { get; set; } = string.Empty;
+        public bool Featured { get; set; }
         public string ImageUrl { get; set; } = string.Empty;
         public double Rating { get; set; }
         public int ReviewCount { get; set; }
@@ -26,6 +30,10 @@ namespace Lootora.Api.DTOs
         public string Slug { get; set; } = string.Empty;
         public string Brand { get; set; } = string.Empty;
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
+        public int Stock { get; set; }
+        public string Tags { get; set; } = string.Empty;
+        public bool Featured { get; set; }
         public string Description { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
         public List<string> GalleryImages { get; set; } = new();
@@ -102,6 +110,10 @@ namespace Lootora.Api.DTOs
         public string Name { get; set; } = string.Empty;
         public string Brand { get; set; } = string.Empty;
         public decimal Price { get; set; }
+        public decimal DiscountPrice { get; set; }
+        public int Stock { get; set; }
+        public string Tags { get; set; } = string.Empty;
+        public bool Featured { get; set; }
         public string Description { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
         public List<string> GalleryImages { get; set; } = new();

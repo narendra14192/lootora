@@ -110,6 +110,10 @@ namespace Lootora.Api.Controllers
                 Slug = slug,
                 Brand = request.Brand,
                 Price = request.Price,
+                DiscountPrice = request.DiscountPrice,
+                Stock = request.Stock,
+                Tags = request.Tags,
+                Featured = request.Featured,
                 Description = request.Description,
                 ImageUrl = request.ImageUrl,
                 GalleryImages = galleryImages,
@@ -147,6 +151,10 @@ namespace Lootora.Api.Controllers
             product.Name = request.Name;
             product.Brand = request.Brand;
             product.Price = request.Price;
+            product.DiscountPrice = request.DiscountPrice;
+            product.Stock = request.Stock;
+            product.Tags = request.Tags;
+            product.Featured = request.Featured;
             product.Description = request.Description;
             product.ImageUrl = request.ImageUrl;
             product.GalleryImages = string.Join(";", request.GalleryImages);
