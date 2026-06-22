@@ -2439,13 +2439,12 @@ function AuthPage({ setUser, showNotification, setCurrentPage }) {
           showNotification(`Welcome back, ${data.username}!`);
           setCurrentPage("home");
         } else {
-          const data = await res.json();
-          throw new Error(data.message || "Credential authentication rejected.");
+          throw new Error("Incorrect username or password");
         }
       }
     } catch (err) {
       if (isSupabaseConfigured) {
-        showNotification(err.message || "Supabase validation rejected", "error");
+        showNotification(isLogin ? "Incorrect username or password" : (err.message || "Registration failed"), "error");
       } else {
         localAuthMock();
       }
@@ -2477,7 +2476,7 @@ function AuthPage({ setUser, showNotification, setCurrentPage }) {
       showNotification(`Registered! Profile ${username} initialized.`);
       setCurrentPage("home");
     } else {
-      showNotification("Credentials mismatch. Use admin/Admin@123 or gamer/Gamer@123 offline.", "error");
+      showNotification("Incorrect username or password", "error");
     }
   };
 
