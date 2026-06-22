@@ -346,9 +346,10 @@ export default function App() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [adminSelectedProduct, setAdminSelectedProduct] = useState(null);
   const [adminForm, setAdminForm] = useState({
-    name: "", brand: "", price: "", description: "", imageUrl: "",
-    galleryImages: "", specifications: "", categoryId: 1, buyUrl: "",
-    isTrending: false, isLimitedEdition: false
+    name: "", brand: "", price: "", discountPrice: "", stock: "", tags: "",
+    description: "", imageUrl: "", galleryImages: "", specifications: "",
+    categoryId: 1, buyUrl: "", isTrending: false, isLimitedEdition: false,
+    featured: false
   });
 
   useEffect(() => {
@@ -576,16 +577,23 @@ export default function App() {
       }
     });
 
+    const finalBuyUrl = adminForm.buyUrl || `https://www.amazon.in/s?k=${encodeURIComponent(adminForm.name)}&linkCode=ll2&tag=lootora21-21&linkId=adb686c2312ad063f605e51bfbbe995f&ref_=as_li_ss_tl`;
+    const finalImageUrl = adminForm.imageUrl || `https://picsum.photos/400/400?random=${Math.floor(Math.random() * 1000)}`;
+
     const payload = {
       name: adminForm.name,
       brand: adminForm.brand,
       price: parseFloat(adminForm.price),
+      discountPrice: parseFloat(adminForm.discountPrice) || parseFloat(adminForm.price),
+      stock: parseInt(adminForm.stock) || 10,
+      tags: adminForm.tags || "gaming;gear",
+      featured: adminForm.featured,
       description: adminForm.description,
-      imageUrl: adminForm.imageUrl || "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
+      imageUrl: finalImageUrl,
       galleryImages: galleryArr,
       specifications: specsObj,
       categoryId: parseInt(adminForm.categoryId),
-      buyUrl: adminForm.buyUrl,
+      buyUrl: finalBuyUrl,
       isTrending: adminForm.isTrending,
       isLimitedEdition: adminForm.isLimitedEdition
     };
@@ -2574,9 +2582,10 @@ function AdminPage({
   const openAddModal = () => {
     setAdminSelectedProduct(null);
     setAdminForm({
-      name: "", brand: "", price: "", description: "", imageUrl: "",
-      galleryImages: "", specifications: "", categoryId: categories[0]?.id || 1, buyUrl: "",
-      isTrending: false, isLimitedEdition: false
+      name: "", brand: "", price: "", discountPrice: "", stock: "", tags: "",
+      description: "", imageUrl: "", galleryImages: "", specifications: "",
+      categoryId: categories[0]?.id || 1, buyUrl: "", isTrending: false,
+      isLimitedEdition: false, featured: false
     });
     setIsEditModalOpen(true);
   };
@@ -2606,6 +2615,9 @@ function AdminPage({
       name: p.name,
       brand: p.brand,
       price: p.price.toString(),
+      discountPrice: p.discountPrice ? p.discountPrice.toString() : "",
+      stock: p.stock ? p.stock.toString() : "",
+      tags: p.tags || "",
       description: p.description,
       imageUrl: p.imageUrl,
       galleryImages: galStr || "",
@@ -2613,7 +2625,8 @@ function AdminPage({
       categoryId: p.categoryId || 1,
       buyUrl: p.buyUrl,
       isTrending: p.isTrending,
-      isLimitedEdition: p.isLimitedEdition
+      isLimitedEdition: p.isLimitedEdition,
+      featured: !!p.featured
     });
     setIsEditModalOpen(true);
   };
@@ -2820,6 +2833,18 @@ function AdminPage({
                 <input type="number" required value={adminForm.price} onChange={(e) => setAdminForm({...adminForm, price: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" />
               </div>
               <div className="space-y-1">
+                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">DISCOUNT PRICE INR (₹) (OPTIONAL)</label>
+                <input type="number" value={adminForm.discountPrice} onChange={(e) => setAdminForm({...adminForm, discountPrice: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" placeholder="Same as valuation if empty..." />
+              </div>
+              <div className="space-y-1">
+                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">STOCK COUNT (OPTIONAL)</label>
+                <input type="number" value={adminForm.stock} onChange={(e) => setAdminForm({...adminForm, stock: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" placeholder="10..." />
+              </div>
+              <div className="space-y-1">
+                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">SEARCH TAGS (OPTIONAL, SEMICOLON SEPARATED)</label>
+                <input type="text" value={adminForm.tags} onChange={(e) => setAdminForm({...adminForm, tags: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" placeholder="gaming;rgb;wireless..." />
+              </div>
+              <div className="space-y-1">
                 <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">CATEGORY NODE</label>
                 <select value={adminForm.categoryId} onChange={(e) => setAdminForm({...adminForm, categoryId: parseInt(e.target.value)})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white font-orbitron">
                   {categories.map(c => (
@@ -2832,8 +2857,8 @@ function AdminPage({
                 <textarea rows="3" required value={adminForm.description} onChange={(e) => setAdminForm({...adminForm, description: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" />
               </div>
               <div className="space-y-1 md:col-span-2">
-                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">IMAGE URL</label>
-                <input type="url" value={adminForm.imageUrl} onChange={(e) => setAdminForm({...adminForm, imageUrl: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" />
+                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">IMAGE URL (OPTIONAL - AUTO-GENERATED IF BLANK)</label>
+                <input type="url" value={adminForm.imageUrl} onChange={(e) => setAdminForm({...adminForm, imageUrl: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" placeholder="Leave blank to auto-generate placeholder image..." />
               </div>
               <div className="space-y-1 md:col-span-2">
                 <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">GALLERY (SEMICOLON SEPARATED URLS)</label>
@@ -2844,10 +2869,10 @@ function AdminPage({
                 <input type="text" value={adminForm.specifications} onChange={(e) => setAdminForm({...adminForm, specifications: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" />
               </div>
               <div className="space-y-1 md:col-span-2">
-                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">RETAILER BUY URL</label>
-                <input type="url" required value={adminForm.buyUrl} onChange={(e) => setAdminForm({...adminForm, buyUrl: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" />
+                <label className="text-[9px] font-orbitron font-bold text-lootora-muted tracking-widest uppercase">RETAILER BUY URL (OPTIONAL - AUTO-GENERATED IF BLANK)</label>
+                <input type="url" value={adminForm.buyUrl} onChange={(e) => setAdminForm({...adminForm, buyUrl: e.target.value})} className="w-full bg-lootora-bg border border-white/10 rounded px-3 py-2 text-white" placeholder="Leave blank to auto-generate Amazon Affiliate link..." />
               </div>
-              <div className="flex items-center space-x-6 py-2 md:col-span-2">
+              <div className="flex flex-wrap items-center gap-6 py-2 md:col-span-2">
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input type="checkbox" checked={adminForm.isTrending} onChange={(e) => setAdminForm({...adminForm, isTrending: e.target.checked})} className="accent-lootora-purple rounded" />
                   <span className="font-orbitron font-bold tracking-widest text-[9px] text-lootora-muted uppercase">TRENDING DEALS</span>
@@ -2855,6 +2880,10 @@ function AdminPage({
                 <label className="flex items-center space-x-2 cursor-pointer">
                   <input type="checkbox" checked={adminForm.isLimitedEdition} onChange={(e) => setAdminForm({...adminForm, isLimitedEdition: e.target.checked})} className="accent-lootora-pink rounded" />
                   <span className="font-orbitron font-bold tracking-widest text-[9px] text-lootora-muted uppercase">LIMITED EDITION</span>
+                </label>
+                <label className="flex items-center space-x-2 cursor-pointer">
+                  <input type="checkbox" checked={adminForm.featured} onChange={(e) => setAdminForm({...adminForm, featured: e.target.checked})} className="accent-lootora-blue rounded" />
+                  <span className="font-orbitron font-bold tracking-widest text-[9px] text-lootora-muted uppercase">FEATURED ON HOMEPAGE</span>
                 </label>
               </div>
               <button type="submit" className="md:col-span-2 bg-gradient-to-r from-lootora-purple to-lootora-pink hover:shadow-neonPurple text-white py-3 rounded font-orbitron font-bold text-xs tracking-wider transition-all">
